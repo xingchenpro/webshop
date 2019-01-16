@@ -1,0 +1,773 @@
+{
+  "subjects": [
+    {
+      "id":"1",
+        "title": "软件开发与测试技术实训",
+        "tutor": "王向辉",
+        "isExam": "2",
+        "scope": "校外",
+        "isSel": false,
+        "teacherNum": "10000",
+        "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+        "subContent": "做成一个完整的项目 具有………………………………功能",
+        "subPlan": "第一周…………第二周…………",
+        "subExamReq": "努力完成要求  做出完整项目",
+        "students": [
+        {
+          "name": "刘慧慧",
+          "class": "软件151",
+          "schoolNum": "201511104000",
+          "phoneNum":"11111111111",
+          "trainingCompany":"学校",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生11",
+          "class": "软件151",
+          "schoolNum": "201511104011",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生12",
+          "class": "软件151",
+          "schoolNum": "201511104012",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生13",
+          "class": "软件151",
+          "schoolNum": "201511104013",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"2",
+      "title": "3D智能管控平台系统的设计与实现",
+      "tutor": "王一",
+      "isExam": "1",
+      "scope": "校内",
+      "isSel": false,
+      "teacherNum": "10001",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王一一",
+          "class": "软件151",
+          "schoolNum": "201511104001",
+          "phoneNum":"12345678910",
+          "trainingCompany":"学校",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"3",
+      "title": "在线作业提交系统设计与实现",
+      "tutor": "王二",
+      "isExam": "2",
+      "scope": "校外",
+      "isSel": false,
+      "teacherNum": "10002",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王二二",
+          "class": "软件152",
+          "schoolNum": "201511104002",
+          "phoneNum":"12345678910",
+          "trainingCompany":"学校",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生14",
+          "class": "软件151",
+          "schoolNum": "201511104014",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生15",
+          "class": "软件151",
+          "schoolNum": "201511104015",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生16",
+          "class": "软件151",
+          "schoolNum": "201511104016",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生17",
+          "class": "软件151",
+          "schoolNum": "201511104017",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生18",
+          "class": "软件151",
+          "schoolNum": "201511104018",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生19",
+          "class": "软件151",
+          "schoolNum": "201511104019",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生20",
+          "class": "软件151",
+          "schoolNum": "201511104020",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生21",
+          "class": "软件151",
+          "schoolNum": "201511104021",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生22",
+          "class": "软件151",
+          "schoolNum": "201511104022",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生23",
+          "class": "软件151",
+          "schoolNum": "201511104023",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生24",
+          "class": "软件151",
+          "schoolNum": "201511104024",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生25",
+          "class": "软件151",
+          "schoolNum": "201511104025",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生26",
+          "class": "软件151",
+          "schoolNum": "201511104026",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生27",
+          "class": "软件151",
+          "schoolNum": "201511104027",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        },
+        {
+          "name": "学生28",
+          "class": "软件151",
+          "schoolNum": "201511104028",
+          "phoneNum":"11111111111",
+          "trainingCompany":"腾讯",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"4",
+      "title": "实训过程管理系统的设计与实现--学生实训模块",
+      "tutor": "王三",
+      "isExam": "2",
+      "scope": "校内",
+      "isSel": false,
+      "teacherNum": "10003",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王三三",
+          "class": "软件152",
+          "schoolNum": "201511104003",
+          "phoneNum":"12345678910",
+          "trainingCompany":"阿里",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"5",
+      "title": "实训过程管理系统的设计与实现--管理员模块",
+      "tutor": "王四",
+      "isExam": "1",
+      "scope": "校内",
+      "isSel": false,
+      "teacherNum": "10004",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王四四",
+          "class": "软件153",
+          "schoolNum": "201511104004",
+          "phoneNum":"12345678910",
+          "trainingCompany":"阿里",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"6",
+      "title": "众筹APP的设计与实现",
+      "tutor": "王五",
+      "isExam": "2",
+      "scope": "校外",
+      "isSel": false,
+      "teacherNum": "10005",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王五五",
+          "class": "软件153",
+          "schoolNum": "201511104005",
+          "phoneNum":"12345678910",
+          "trainingCompany":"阿里",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"7",
+      "title": "成绩管理系统的设计与实现",
+      "tutor": "王六",
+      "isExam": "2",
+      "scope": "校内",
+      "isSel": false,
+      "teacherNum": "10006",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王六六",
+          "class": "软测151",
+          "schoolNum": "201511104006",
+          "phoneNum":"12345678910",
+          "trainingCompany":"阿里",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"8",
+      "title": "银行医院交互系统的设计与实现--接口模块",
+      "tutor": "王七",
+      "isExam": "1",
+      "scope": "校外",
+      "isSel": false,
+      "teacherNum": "10007",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王七七",
+          "class": "软测151",
+          "schoolNum": "201511104007",
+          "phoneNum":"12345678910",
+          "trainingCompany":"百度",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"9",
+      "title": "昌乐公众平台系统的设计与实现",
+      "tutor": "王八",
+      "isExam": "2",
+      "scope": "校外",
+      "isSel": false,
+      "teacherNum": "10008",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王八八",
+          "class": "软测152",
+          "schoolNum": "201511104008",
+          "phoneNum":"12345678910",
+          "trainingCompany":"百度",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    },
+    {
+      "id":"10",
+      "title": "工资管理系统的设计与实现",
+      "tutor": "王九",
+      "isExam": "1",
+      "scope": "校内",
+      "isSel": false,
+      "teacherNum": "10009",
+      "subTechReq": "精通前端三大框架中的一种，精通原生javaScript，了解熟悉计算机网络，懂nodeJS原理",
+      "subContent": "做成一个完整的项目 具有………………………………功能",
+      "subPlan": "第一周…………第二周…………",
+      "subExamReq": "努力完成要求  做出完整项目",
+      "students": [
+        {
+          "name": "王九九",
+          "class": "软测153",
+          "schoolNum": "201511104009",
+          "phoneNum":"12345678910",
+          "trainingCompany":"百度",
+          "weekSummary":"0",
+          "isEdit": false,
+          "reportSubmit":false,
+          "graduationTime":"2018",
+          "profession":"软件工程"
+        }
+      ]
+    }
+  ],
+  "teacherTable": [
+    {
+      "name": "王向辉",
+      "teacherNum": "10000"
+    },
+    {
+      "name": "王一",
+      "teacherNum": "10001"
+    },
+    {
+      "name": "王二",
+      "teacherNum": "10002"
+    },
+    {
+      "name": "王三",
+      "teacherNum": "10003"
+    },
+    {
+      "name": "王四",
+      "teacherNum": "10004"
+    },
+    {
+      "name": "王五",
+      "teacherNum": "10005"
+    },
+    {
+      "name": "王六",
+      "teacherNum": "10006"
+    },
+    {
+      "name": "王七",
+      "teacherNum": "10007"
+    },
+    {
+      "name": "王八",
+      "teacherNum": "10008"
+    },
+    {
+      "name": "王九",
+      "teacherNum": "10009"
+    },
+    {
+      "name": "王十",
+      "teacherNum": "10010"
+    },
+    {
+      "name": "王十",
+      "teacherNum": "10010"
+    }
+  ],
+  "trainingCompany": [
+    {
+      "companyName": "学校",
+      "manager": "王向辉",
+      "phoneNum": "11111111111",
+      "city": "济南",
+      "address": "凤鸣路1000号山东建筑大学",
+      "student": [
+        {
+          "class": "软件151",
+          "name": "王一",
+          "schoolNum": "201511104001"
+        },
+        {
+          "class": "软件151",
+          "name": "王二二",
+          "schoolNum": "201511104002"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        }
+      ]
+    },
+    {
+      "companyName": "百度",
+      "manager": "王向辉",
+      "phoneNum": "22222222222",
+      "city": "北京",
+      "address": "……………………",
+      "student": [
+        {
+          "class": "软件151",
+          "name": "王一",
+          "schoolNum": "201511104001"
+        },
+        {
+          "class": "软件151",
+          "name": "王二二",
+          "schoolNum": "201511104002"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        }
+      ]
+    },
+    {
+      "companyName": "阿里",
+      "manager": "王向辉",
+      "phoneNum": "33333333333",
+      "city": "杭州",
+      "address": "……………………",
+      "student": [
+        {
+          "class": "软件151",
+          "name": "王一",
+          "schoolNum": "201511104001"
+        },
+        {
+          "class": "软件151",
+          "name": "王二二",
+          "schoolNum": "201511104002"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        }
+      ]
+    },
+    {
+      "companyName": "腾讯",
+      "manager": "王向辉",
+      "phoneNum": "44444444444",
+      "city": "深圳",
+      "address": "……………………",
+      "student": [
+        {
+          "class": "软件151",
+          "name": "王一",
+          "schoolNum": "201511104001"
+        },
+        {
+          "class": "软件151",
+          "name": "王二二",
+          "schoolNum": "201511104002"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        },
+        {
+          "class": "软件151",
+          "name": "王三三",
+          "schoolNum": "201511104003"
+        }
+      ]
+    }
+  ]
+}

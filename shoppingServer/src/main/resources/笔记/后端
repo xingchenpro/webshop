@@ -1,0 +1,6 @@
+1.参数：produces= {"application/json;charset=UTF-8"}
+http://blog.51cto.com/wangguangshuo/2047667
+2.@ModelAttribute
+https://www.cnblogs.com/jin-zhe/p/8241368.html
+3.consumes,produces
+https://blog.csdn.net/wrongyao/article/details/83785016

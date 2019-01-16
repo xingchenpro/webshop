@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nb.shopping.dao.GoodsDao">
+
+    <resultMap id="GoodsResult" type="Goods">
+        <result property="id" column="id"/>
+        <result property="number" column="number"/>
+        <result property="name" column="name"/>
+        <result property="price" column="price"/>
+        <result property="discount" column="discount"/>
+        <result property="desc" column="desc"/>
+        <result property="photo" column="photo"/>
+        <result property="count" column="count"/>
+        <result property="date" column="date"/>
+        <result property="status" column="status"/>
+        <result property="sellCount" column="sellCount"/>
+        <result property="typeId" column="typeId"/>
+        <result property="goodsTypesName" column="goodsTypesName"/>
+    </resultMap>
+
+    <resultMap id="GoodsAndSellerResult" type="Goods">
+        <result property="id" column="id"/>
+        <result property="number" column="number"/>
+        <result property="name" column="name"/>
+        <result property="price" column="price"/>
+        <result property="discount" column="discount"/>
+        <result property="desc" column="desc"/>
+        <result property="photo" column="photo"/>
+        <result property="count" column="count"/>
+        <result property="date" column="date"/>
+        <result property="status" column="status"/>
+        <result property="sellCount" column="sellCount"/>
+        <result property="typeId" column="typeId"/>
+        <result property="goodsTypesName" column="goodsTypesName"/>
+        <association property="seller" javaType="com.nb.shopping.entity.Seller">
+            <id property="id" column="seller_id"/>
+            <result property="name" column="sellerName"/>
+            <result property="rating" column="sellerRating"/>
+        </association>
+    </resultMap>
+
+    <sql id="addGoodsSQL">
+        number,name,price,discount,desc,phone,count,date,status,sellCount,typeId
+    </sql>
+
+    <!--添加商品-->
+    <insert id="addGoods" parameterType="Goods">
+        INSERT INTO goods(
+        <include refid="addGoodsSQL"/>
+        ) VALUES
+        (#{number},#{name},#{price},#{discount},#{desc},#{photo},#{count},#{date},#{status},#{sellCount},#{typeId})
+    </insert>
+
+    <!--查询商品和商品的分类名称-->
+    <select id="findGoods" parameterType="Map" resultMap="GoodsResult">
+        SELECT g.* , gt.name AS goodsTypesName FROM goods g ,goodstypes gt
+        WHERE g.typeId = gt.id
+        <if test="status!=null">
+            AND status = #{status}
+        </if>
+        ;
+    </select>
+
+    <!--修改商品属性-->
+    <update id="updateGoodsInfo" parameterType="Goods">
+        UPDATE goods SET name = #{name}, price = #{price},typeId = #{typeId} WHERE id = #{id}
+    </update>
+
+    <!--管理员删除商品-->
+    <delete id="deleteGoods" parameterType="integer">
+        DELETE FROM  goods WHERE id = #{id}
+    </delete>
+
+    <!--管理员更新商品表状态-->
+    <update id="updateGoodsStatus" parameterType="Map">
+        UPDATE goods SET
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        <if test="goodsId!=null">
+            WHERE id = #{goodsId}
+        </if>
+    </update>
+
+    <!--管理员更新商家商品表状态-->
+    <update id="updateSellerGoodsStatus" parameterType="Map">
+        UPDATE seller_goods SET
+        <if test="status!=null">
+            goodsCheck = #{status}
+        </if>
+        <if test="goodsId!=null">
+            WHERE goods_id= #{goodsId}
+        </if>
+    </update>
+
+    <!--得到每一位商家的商品-->
+    <select id="getPeerSellerGoods" parameterType="Map" resultMap="GoodsAndSellerResult">
+        SELECT g.*,gt.name AS goodsTypesName,s.id AS seller_id ,s.name AS sellerName,s.rating AS sellerRating  FROM goods g,goodstypes gt,seller s ,seller_goods sg
+        WHERE g.typeId = gt.id AND s.id = sg.seller_id AND g.id = sg.goods_id AND sg.goodsCheck =1 ORDER BY g.id;
+    </select>
+
+    <!--得到某商家的全部商品信息或一条信息-->
+    <select id="getSellerAllGoods" parameterType="Map" resultMap="GoodsResult">
+        SELECT g.* FROM goods g,seller_goods sg WHERE g.id = sg.goods_id
+        <if test="sellerId!=null">
+            AND sg.seller_id = #{sellerId}
+        </if>
+        <if test="goodsCheck!=null">
+            AND sg.goodsCheck = #{goodsCheck}
+        </if>
+        <if test="goodsId!=null">
+            AND sg.goods_id = #{goodsId}
+        </if>
+    </select>
+
+    <!--得到某商家信息和一条商品-->
+    <select id="getSellerGoods" parameterType="Map" resultMap="GoodsAndSellerResult">
+        SELECT g.*,gt.name AS goodsTypesName,s.id AS seller_id ,s.name AS sellerName,s.rating AS sellerRating FROM goods
+        g,goodstypes gt,seller s ,seller_goods sg
+        WHERE
+        g.id = sg.goods_id
+        <if test="sellerId!=null">
+            AND sg.seller_id = #{sellerId}
+        </if>
+        <if test="goodsCheck!=null">
+            AND sg.goodsCheck = #{goodsCheck}
+        </if>
+        <if test="goodsId!=null">
+            AND sg.goods_id = #{goodsId}
+        </if>
+        limit 1
+    </select>
+
+</mapper>

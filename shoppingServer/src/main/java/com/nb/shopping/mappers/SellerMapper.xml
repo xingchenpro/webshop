@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nb.shopping.dao.SellerDao">
+
+    <resultMap id="sellerResult" type="Seller">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="desc" column="desc"/>
+        <result property="location" column="location"/>
+        <result property="rating" column="rating"/>
+        <result property="profile" column="profile"/>
+        <result property="phoneNum" column="phoneNum"/>
+    </resultMap>
+
+    <resultMap id="GoodsResult" type="Goods">
+        <result property="id" column="id"/>
+        <result property="number" column="number"/>
+        <result property="name" column="name"/>
+        <result property="price" column="price"/>
+        <result property="discount" column="discount"/>
+        <result property="desc" column="desc"/>
+        <result property="photo" column="photo"/>
+        <result property="count" column="count"/>
+        <result property="date" column="date"/>
+        <result property="status" column="status"/>
+        <result property="sellCount" column="sellCount"/>
+        <result property="typeId" column="typeId"/>
+        <result property="goodsTypesName" column="goodsTypesName"/>
+    </resultMap>
+
+    <!--得到商家信息-->
+    <select id="getSeller" parameterType="Map" resultMap="sellerResult">
+        SELECT * FROM seller
+    </select>
+
+    <!--得到商品信息-->
+    <select id="getSellerGoods" parameterType="Map" resultMap="GoodsResult">
+        SELECT g.* , gt.name AS goodsTypesName  FROM goods g ,goodstypes gt, seller_goods sg
+        WHERE g.typeId = gt.id AND g.id = sg.goods_id
+        <if test="sellerId!=null">
+            AND seller_id = #{sellerId}
+        </if>
+        <if test="goodsCheck!=null">
+            AND goodsCheck = #{goodsCheck}
+        </if>
+        ;
+    </select>
+
+    <!--商家删除商品-->
+    <delete id="deleteSellerGoods" parameterType="Map">
+        DELETE FROM seller_goods WHERE seller_id = #{sellerId} AND goods_id = #{goodsId}
+    </delete>
+
+    <!--商家添加商品-->
+    <insert id="addSellerGoods" parameterType="Map">
+        INSERT INTO seller_goods VALUE (#{sellerId},#{goodsId},#{goodsCheck})
+    </insert>
+
+    <!--商家添加新商品-->
+    <insert id="addNewGoods" parameterType="Goods" useGeneratedKeys="true" keyProperty="id"
+            keyColumn="id">
+        INSERT INTO goods(`name`,`desc`,`price`,`photo`,`typeId`,`status`)VALUES (#{name},#{desc},#{price},#{photo},#{typeId},0)
+    </insert>
+
+    <!--商品审核状态-->
+    <select id="getGoodsCheckStatus" parameterType="Map" resultMap="GoodsResult">
+        SELECT g.* , gt.name AS goodsTypesName  FROM goods g ,goodstypes gt, seller_goods sg
+        WHERE g.typeId = gt.id AND g.id = sg.goods_id
+        <if test="sellerId!=null">
+            AND seller_id = #{sellerId}
+        </if>
+        <if test="goodsCheck!=null">
+            AND goodsCheck != #{goodsCheck}
+        </if>
+        ;
+    </select>
+
+    <!--商品Id得到商家id-->
+    <select id="getSellerMsgByGoods" parameterType="Map" resultMap="sellerResult">
+        SELECT * FROM seller s ,seller_goods sg,goods g
+        <if test="goodsId!=null">
+            WHERE  sg.goods_id = #{goodsId} AND sg.seller_id = s.id limit 1
+        </if>
+    </select>
+
+    <!--添加商家-->
+    <insert id="insertSeller" parameterType="Seller">
+        INSERT INTO seller VALUES(#{id},#{name},#{desc},#{location},#{rating},#{profile},#{phoneNum})
+    </insert>
+
+    <!--更新商家信息-->
+    <update id="updateSellerInfo" parameterType="Seller">
+        UPDATE seller SET name = #{name},SET `desc` = #{desc},SET location = #{location},SET rating = #{rating},SET profile = #{profile},SET phoneNum = #{phoneNum}
+    </update>
+
+</mapper>

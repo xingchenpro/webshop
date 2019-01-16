@@ -1,0 +1,6 @@
+√1.SSM 框架无法返回 JSON 数据，406错误。解决
+√2.解决 mybatis 字段相同返回结果覆盖问题
+https://blog.csdn.net/xzm_rainbow/article/details/15336933
+√3.web.xml 配置无法修改乱码 解决
+修改 tomcat server.xml 文件
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />

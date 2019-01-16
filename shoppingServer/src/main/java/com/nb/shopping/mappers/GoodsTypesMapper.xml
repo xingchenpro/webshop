@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nb.shopping.dao.GoodsTypesDao">
+
+    <resultMap id="GoodsTypesResult" type="GoodsTypes">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+    </resultMap>
+
+    <resultMap id="findGoodsAndTypesResult" type="GoodsTypes">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <collection property="goods" ofType="com.nb.shopping.entity.Goods">
+            <result property="id" column="g_id"/>
+            <result property="number" column="number"/>
+            <result property="name" column="g_name"/>
+            <result property="price" column="price"/>
+            <result property="discount" column="discount"/>
+            <result property="desc" column="desc"/>
+            <result property="photo" column="photo"/>
+            <result property="count" column="count"/>
+            <result property="date" column="date"/>
+            <result property="status" column="status"/>
+            <result property="sellCount" column="sellCount"/>
+            <result property="typeId" column="typeId"/>
+        </collection>
+    </resultMap>
+
+    <sql id="addGoodsTypesSQL">
+        name,description
+    </sql>
+
+    <!--添加分类-->
+    <insert id="addGoodsTypes" parameterType="GoodsTypes">
+        INSERT INTO goodstypes(
+        <include refid="addGoodsTypesSQL"/>
+        ) VALUES (#{name},#{description})
+    </insert>
+
+    <!--查询分类-->
+    <select id="findGoodsTypes" resultMap="GoodsTypesResult">
+        SELECT  * FROM  goodstypes
+    </select>
+
+    <!--查询分类和对应的商品-->
+    <select id="findGoodsAndTypes" resultMap="findGoodsAndTypesResult">
+        SELECT  gt.*,g.id AS g_id,g.name AS g_name FROM  goodstypes gt ,goods g WHERE gt.id = g.typeId;
+    </select>
+
+
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nb.shopping.dao.CustomerDao">
+
+    <resultMap id="customerResult" type="Customer">
+        <result property="id" column="id"/>
+        <result property="nickName" column="nickName"/>
+        <result property="email" column="email"/>
+        <result property="address" column="address"/>
+        <result property="level" column="level"/>
+        <result property="profile" column="profile"/>
+        <result property="phoneNum" column="phoneNum"/>
+    </resultMap>
+
+    <select id="getCustomer" parameterType="Map" resultMap="customerResult">
+        SELECT * FROM customer
+        <if test="userId!=null">
+            WHERE id = #{userId}
+        </if>
+    </select>
+
+    <!--添加会员-->
+    <insert id="insertCustomer" parameterType="Customer">
+        INSERT INTO customer(`id`,`nickName`) VALUE (#{id},#{nickName})
+    </insert>
+
+    <!--修改会员信息-->
+    <update id="updateCustomer" parameterType="Customer">
+        UPDATE user
+        SET nickName =#{nickName},SET email =#{email},SET address =#{address},SET level =#{level},SET profile =#{profile},SET phoneNum =#{phoneNum}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

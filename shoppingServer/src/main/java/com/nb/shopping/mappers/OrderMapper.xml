@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nb.shopping.dao.OrderDao">
+
+    <resultMap id="orderResult" type="Order">
+        <result property="id" column="id"/>
+        <result property="sellerId" column="sellerId"/>
+        <result property="customerId" column="customerId"/>
+        <result property="time" column="time"/>
+        <result property="location" column="location"/>
+        <result property="status" column="status"/>
+        <collection property="goods" ofType="com.nb.shopping.entity.Goods">
+            <id property="id" column="goods_id"/>
+            <result property="number" column="number"/>
+            <result property="name" column="name"/>
+            <result property="price" column="price"/>
+            <result property="discount" column="discount"/>
+            <result property="desc" column="desc"/>
+            <result property="photo" column="photo"/>
+            <result property="count" column="count"/>
+            <result property="date" column="date"/>
+            <result property="status" column="goods_status"/>
+            <result property="sellCount" column="sellCount"/>
+            <result property="typeId" column="typeId"/>
+            <result property="goodsTypesName" column="goodsTypesName"/>
+            <result property="orderCount" column="orderCount"/>
+            <association property="seller" javaType="com.nb.shopping.entity.Seller">
+                <id property="id" column="seller_id"/>
+                <result property="name" column="sellerName"/>
+                <result property="rating" column="sellerRating"/>
+            </association>
+        </collection>
+    </resultMap>
+
+    <!--返回所有订单及订单对应的商品-->
+    <select id="getCustomerAllOrder" parameterType="Map" resultMap="orderResult">
+        SELECT o.*,g.*,gt.name AS goodsTypesName,g.id AS goods_id,g.status AS goods_status ,s.id AS seller_id,s.name AS
+        sellerName,og.count AS orderCount FROM goods g, `order` o,seller s,seller_goods sg
+        ,order_goods og,goodstypes gt
+        WHERE o.id = og.orderId AND og.goodsId = g.id AND g.typeId = gt.id AND s.id = sg.seller_id AND g.id =
+        sg.goods_id
+        <if test="userId!=null">
+            AND o.customerId = #{userId}
+        </if>
+        ORDER BY o.`Time` DESC
+        ;
+    </select>
+
+    <!--添加订单-->
+    <insert id="addOrder" parameterType="Order" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `order`(sellerId,customerId,`time`,location,status)VALUES (#{sellerId},#{customerId},#{time},#{location},#{status})
+    </insert>
+
+    <!--添加订单商品-->
+    <insert id="addOrderGoods" parameterType="Map">
+        INSERT INTO  order_goods VALUES (#{orderId},#{goodsId},#{count})
+    </insert>
+
+    <!--修改订单状态-->
+    <update id="updateOrderStatus" parameterType="Map">
+        UPDATE `order` SET status = 1 WHERE id = #{orderId}
+    </update>
+
+
+</mapper>
